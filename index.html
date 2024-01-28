@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black">
+<!-- loader section -->
+<div id="loading">
+  <span class="loader"></span>
+</div>
+<!-- end -->
+<!-- Display Api -->
+  <div class="container py-5 ">
+  <div class="row gy-5" id="myData">
+  </div>
+  <div id="mealData"></div> <!-- Additional div for meal data display -->
+</div>
+  </div>
+<!-- End -->
+<!-- sidebar menu -->
+<div id="setting" class="d-none">
+  <div class="gear-box d-none">
+    <div class=" page-hero ">
+    <ul class="slide-menu p-5" id="menu" style="cursor: pointer;">
+      <li class="text1" >Search</li>
+       <li class="pt-4 text2" >Categories</li>
+      <li class="pt-4 text3">Area</li>
+      <li class="pt-4 text4">Ingredients</li>
+      <li class="pt-4 text6">Contact Us</li> 
+    </ul>
+      <div class="socials">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-solid fa-globe"></i>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="icon-container d-flex flex-column align-items-center justify-content-between p-1">
+  <img src="images/logo.png" alt="happy face" style="width: 40px;" height="40px">
+ <div class="pos position-relative">
+  <i class="fa-solid fa-bars fa-3x" id="class-i"  ></i> 
+ </div>
+  <div class="pos2 position-absolute">
+  <i class="fa-solid fa-xmark fa-3x d-none" id="class-x" ></i>
+  </div>
+  <div class="icon-container2 d-flex flex-column align-items-center justify-content-evenly">
+  <i class="fa-solid fa-globe"></i>
+  <i class="fa-solid fa-share-nodes" ></i>
+</div>
+  </div>
+  </div>
+
+<!-- end -->
+ 
+<!-- search section -->
+<div class="container py-5 d-none" id="search">
+<div class="position d-flex ">
+  <input type="text" class="form-control m-4 bg-black input1" placeholder="Search By Name" id="input1">
+  <input type="text" class="form-control m-4 bg-black " placeholder="Serach By Letter" id="input2">
+</div>
+<div class="row gy-5" id="myDatas">
+</div>
+</div>
+<!-- end -->
+
+<!-- categories section -->
+<section id="categories" class="d-none">
+  <div class="container">
+    <div class="row gy-5" id="myData3">
+    </div>
+  </div>
+</section>
+<!-- end -->
+<!-- Area -->
+<section class="Area d-none" id="area">
+  <div class="container text-white">
+    <div class="row " id="areas">
+    </div>
+  </div>
+</section>
+        <!-- end -->
+      <!-- ingrediants -->
+<section class=" d-none" id="ing">
+  <div class="container text-white">
+    <div class="row" id="ingg">
+    </div>
+  </div>
+</section>
+<!-- end -->
+<!-- contact us -->
+<div class="container py-5 d-none" id="contact">
+  <div class="position d-flex ">
+    <label for="productName" class="mb-3"></label>
+    <input  oninput="validateProductName()"  type="text" class="form-control m-4" id="productName" placeholder="Enter Your Name">
+    <br/>
+<p  class="text-danger d-none " id="wrongName"></p>
+<label for="email" class="mb-3"></label>
+<input oninput="validateEmail()" type="text" class="form-control m-4" id="email" placeholder="Enter Your email">
+<br/>
+<p class="text-danger d-none" id="wrongemail"></p>
+  </div>
+
+  <div class="position d-flex ">
+    <label for="phone" class="mb-3"></label>
+    <input oninput="validatePhone()" type="text" class="form-control m-4" id="phone" placeholder="Enter Your Phone">
+    <br/>
+    <p class="text-danger d-none" id="wrongNumber"></p>
+    <label for="age" class="mb-3"></label>
+    <input oninput="validateAge()" type="text" class="form-control m-4" id="age" placeholder="Enter Your Age">
+    <br/>
+    <p class="text-danger d-none" id="wrongAge"></p>
+  </div>
+  <div class="position d-flex ">
+    <label for="password" class="mb-3"></label>
+    <input oninput="validatePassword()" type="password" class="form-control m-4" id="password" placeholder="Enter Your Password">
+    <br/>
+    <p class="text-danger d-none" id="wrongPassword"></p>
+    <label for="password" class="mb-3"></label>
+    <input oninput="validatePassword()" type="password" class="form-control m-4" id="confirmPassword" placeholder="RePassword">
+    <br/>
+    <p class="text-danger d-none" id="wrongConfirmPassword"></p>
+  </div>
+<div class="zorar d-flex justify-content-center align-content-center">
+  <button type="button" class="btn btn-outline-danger" id="submitButton" disabled onclick="submitForm()">Submit</button>
+</div>
+</div>
+<!-- end -->
+<script src="js/jquery-3.7.1.min.js"> </script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
